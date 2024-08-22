@@ -13,11 +13,10 @@
       rel="stylesheet"
     />
 
-    <!-- Note : I'm  using  Booststrap Icon only for good looking icons Not Framework. My main Framework is TailwindCSS -->
-    <!-- Bootstrap Icon CDN -->
+    <!-- Google Icon CDN -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
     />
 
     <!-- TailwindCss CDN -->
@@ -32,12 +31,124 @@
             fontFamily: {
               display: ['"Manrope", sans-serif'],
             },
+            backgroundImage: {
+              "hero-pattern": "url('./assets/bg.jpg')",
+            },
+            screens: {
+              "in-fx": "1080px",
+            },
           },
         },
       };
     </script>
     <!-- TailwindCSS Utilities -->
-    <style type="text/tailwindcss"></style>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .icon {
+          @apply block w-8 h-8 p-[3px] text-center text-xl font-bold bg-yellow-200 text-black rounded-full;
+        }
+        .icon-invert {
+          @apply block w-7 h-7 p-[4px] text-center text-sm font-bold bg-gray-800 text-white rounded-full;
+        }
+        .fx-row {
+          @apply flex flex-row justify-between items-center;
+        }
+        .fx-col {
+          @apply flex flex-col justify-between items-center;
+        }
+        ul > li {
+          @apply cursor-pointer;
+        }
+        details ul.hidden-menu > li {
+          @apply w-full grid grid-cols-[20px,1fr] grid-rows-[40px] gap-3 justify-center items-center px-8 py-2 rounded-lg hover:text-gray-900 transition-colors ease-in-out duration-150;
+        }
+        details[open] {
+          ul.hidden-menu {
+            @apply max-h-80;
+            transition: 0.5s;
+          }
+        }
+        details:not([open]) {
+          ul.hidden-menu {
+            @apply max-h-0;
+            transition: 0.5s;
+          }
+        }
+        .nv {
+          @apply text-gray-600 px-2 pt-2 text-lg;
+        }
+        .cs-text {
+          font-size: 1.5rem !important;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body class="font-display">
+    <!-- Header -->
+    <header class="xl:px-28 py-6 sm:px-8 px-4 w-full">
+      <!-- Navbar -->
+      <nav class="fx-row">
+        <a
+          href="#"
+          class="fx-row gap-2 font-extrabold text-gray-800 text-xl sm:text-3xl"
+          ><span class="material-symbols-rounded icon"> arrow_outward </span
+          >Rinterio</a
+        >
+        <ul
+          class="items-center justify-between gap-4 text-gray-500 font-semibold text-lg hidden in-fx:flex"
+        >
+          <li class="text-gray-800 px-2 py-4">Home</li>
+          <li class="px-2 py-4">Services</li>
+          <li class="px-2 py-4">Portfolio</li>
+          <li class="px-2 py-4">Blogs</li>
+          <li class="px-2 py-4">Contact Us</li>
+        </ul>
+        <div class="Nav-Btns fx-row gap-6">
+          <button class="nv search hidden md:block">
+            <span class="material-symbols-rounded"> search </span>
+          </button>
+          <button class="nv cart hidden md:block">
+            <span class="material-symbols-rounded"> shopping_cart </span>
+          </button>
+          <button
+            class="bookConsult hidden md:flex items-center justify-between flex-row gap-2 bg-[#abef5f] font-bold text-black px-7 py-2 rounded-full transition-colors ease-linear duration-300 hover:bg-yellow-300"
+          >
+            Book Consult
+            <span class="material-symbols-rounded icon-invert">
+              arrow_outward
+            </span>
+          </button>
+
+          <!-- Details (Hamburger Menu) -->
+          <details class="nv block lg:hidden menu cs-text relative">
+            <summary class="list-none">
+              <span class="material-symbols-rounded"> menu </span>
+            </summary>
+            <ul
+              class="hidden-menu md:w-80 w-72 overflow-hidden flex items-baseline justi-left flex-col gap-2 text-lg rounded-lg bg-slate-200 shadow-[0_10px_50px_#00000069] border border-[#aba7a733] absolute top-12 right-0"
+            >
+              <li class="text-gray-900 bg-gray-300">
+                <span class="material-symbols-rounded"> home </span> Home
+              </li>
+              <li>
+                <span class="material-symbols-rounded"> build_circle </span>
+                Services
+              </li>
+              <li>
+                <span class="material-symbols-rounded"> business_center </span>
+                Portfolio
+              </li>
+              <li>
+                <span class="material-symbols-rounded"> rss_feed </span> Blog
+              </li>
+              <li>
+                <span class="material-symbols-rounded"> contact_support </span>
+                Contact Us
+              </li>
+            </ul>
+          </details>
+        </div>
+      </nav>
+    </header>
+  </body>
 </html>
