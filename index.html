@@ -103,34 +103,46 @@
         .commercial section article, .residential section article{
           @apply text-gray-500 font-semibold text-sm w-[65%]
         }
+        .section-2 section {
+          @apply w-full sm:w-80 lg:w-40 h-20 mb-24 md:mb-28
+        }
+        .section-2 section span{
+          @apply text-5xl lg:text-4xl text-gray-500
+        }
+        .section-2 section h4{
+          @apply font-black text-3xl text-gray-700 py-2
+        }
+        .section-2 section article{
+          @apply text-sm text-gray-500 font-semibold
+        }
       }
     </style>
   </head>
   <body class="font-display">
     <!-- Header -->
-    <header class="xl:px-28 py-6 sm:px-8 px-4 w-full">
+    <header class="w-full px-4 py-6 xl:px-28 sm:px-8">
       <!-- Navbar -->
       <nav class="fx-row">
         <a
           href="#"
-          class="fx-row gap-2 font-extrabold text-gray-800 text-xl sm:text-3xl"
+          class="gap-2 text-xl font-extrabold text-gray-800 fx-row sm:text-3xl"
           ><span class="material-symbols-rounded icon"> arrow_outward </span
           >Rinterio</a
         >
         <ul
-          class="items-center justify-between gap-4 text-gray-500 font-semibold text-lg hidden in-fx:flex"
+          class="items-center justify-between hidden gap-4 text-lg font-semibold text-gray-500 in-fx:flex"
         >
-          <li class="text-gray-800 px-2 py-4">Home</li>
+          <li class="px-2 py-4 text-gray-800">Home</li>
           <li class="px-2 py-4">Services</li>
           <li class="px-2 py-4">Portfolio</li>
           <li class="px-2 py-4">Blogs</li>
           <li class="px-2 py-4">Contact Us</li>
         </ul>
-        <div class="Nav-Btns fx-row gap-6">
-          <button class="nv search hidden md:block">
+        <div class="gap-6 Nav-Btns fx-row">
+          <button class="hidden nv search md:block">
             <span class="material-symbols-rounded"> search </span>
           </button>
-          <button class="nv cart hidden md:block">
+          <button class="hidden nv cart md:block">
             <span class="material-symbols-rounded"> shopping_cart </span>
           </button>
           <button
@@ -143,7 +155,7 @@
           </button>
 
           <!-- Details (Hamburger Menu) -->
-          <details class="nv block lg:hidden menu cs-text relative">
+          <details class="relative block nv lg:hidden menu cs-text">
             <summary class="list-none">
               <span class="material-symbols-rounded"> menu </span>
             </summary>
@@ -174,10 +186,10 @@
       </nav>
 
       <!-- Hero Section -->
-      <div class="section-hero w-full flex items-center justify-center text-center flex-col gap-4 py-8">
+      <div class="flex flex-col items-center justify-center w-full gap-4 py-8 text-center section-hero">
         <img src="./assets/banner.png" alt="banner" class="block max-w-full" />
         <h1 class="w-full md:w-11/12 text-prime text-2xl md:text-[3.5rem] font-black leading-[1.3333] drop-shadow-[1px_0_0_#212121] tracking-wide">A barn house of this design has a striking appearance</h1>
-        <p class="py-4 w-full md:w-4/5 font-medium text-sm md:text-lg text-gray-600">
+        <p class="w-full py-4 text-sm font-medium text-gray-600 md:w-4/5 md:text-lg">
           The barn house captivates with its blend of rustic charm and modern
           sophistication, featuring weathered wood, sleek metal accents, and
           large windows that flood the space with natural light.
@@ -187,22 +199,24 @@
     </header>
 
     <!-- Main -->
-     <main class="xl:px-28 py-0 md:py-6 sm:px-8 px-4 block w-full">
-      <div class="seection-1 flex items-start justify-between flex-col lg:flex-row gap-4 w-full relative mt-4 md:mt-12 py-0 md:pt-8">
+     <main class="block w-full px-4 py-0 xl:px-28 md:py-6 sm:px-8">
 
-        <div class="infos flex items-center lg:items-start justify-between flex-col w-full lg:w-1/2 gap-4">
+      <!-- Section-1 -->
+      <div class="relative flex flex-col items-start justify-between w-full gap-4 py-0 mt-4 seection-1 lg:flex-row md:mt-12 md:pt-8">
 
-          <img src="./assets/Vector.png" alt="vector" class="vector w-20 xl:w-32 absolute inset-0 xl:-translate-x-14 -translate-x-4 xl:-translate-y-6 -translate-y-2 hidden lg:block">
+        <div class="flex flex-col items-center justify-between w-full gap-4 infos lg:items-start lg:w-1/2">
 
-          <button class="about group text-gray-600 w-full flex items-center lg:justify-start justify-center gap-3 font-bold "><span class="material-symbols-rounded group-hover:translate-x-2 transition-all duration-200">
+          <img src="./assets/Vector.png" alt="vector" class="absolute inset-0 hidden w-20 -translate-x-4 -translate-y-2 vector xl:w-32 xl:-translate-x-14 xl:-translate-y-6 lg:block">
+
+          <button class="flex items-center justify-center w-full gap-3 font-bold text-gray-600 about group lg:justify-start "><span class="transition-all duration-200 material-symbols-rounded group-hover:translate-x-2">
             east
             </span> About Us</button>
-          <h1 class="font-black text-prime text-2xl md:text-4xl lg:w-full xl:w-4/5 sm:w-3/4 w-full text-center lg:text-left ">
+          <h1 class="w-full text-2xl font-black text-center text-prime md:text-4xl lg:w-full xl:w-4/5 sm:w-3/4 lg:text-left ">
             We design thoughtful, liveable spaces</h1>
-          <p class="text-sm text-gray-600 font-semibold py-3 text-center lg:text-left">The barn house captivates with its blend of rustic charm
+          <p class="py-3 text-sm font-semibold text-center text-gray-600 lg:text-left">The barn house captivates with its blend of rustic charm
              and modern sophistication, featuring weathered wood, sleek metal accents.
           </p>
-          <div class="imgs-infoz flex items-start justify-between lg:flex-col sm:flex-row flex-col">
+          <div class="flex flex-col items-start justify-between imgs-infoz lg:flex-col sm:flex-row">
             <div class="commercial">
               <img src="./assets/commercial.png" alt="commercial">
               <section>
@@ -223,6 +237,31 @@
         <img src="./assets/Rectangle.png" alt="house" class="
         w-full  lg:w-1/2 overflow-hidden rounded-xl max-h-full lg:max-h-full sm:max-h-[29rem] object-cover">
       </div>
+
+      <!-- Section-2 -->
+       <div class="flex flex-row flex-wrap items-center justify-around w-full my-10 text-center lg:justify-between md:my-28 section-2">
+        <section>
+          <span class="material-symbols-rounded">reviews</span>
+          <h4>235+</h4>
+          <article>Happy Client Review</article>
+        </section>
+        <section>
+          <span class="material-symbols-rounded"> account_tree </span>
+          <h4>50+</h4>
+          <article>Work Departments</article>
+        </section>
+        <section>
+          <span class="material-symbols-rounded"> groups </span>
+          <h4>30k+</h4>
+          <article>Our Happy Client</article>
+        </section>
+        <section>
+          <span class="material-symbols-rounded"> group </span>
+          <h4>307+</h4>
+          <article>Staff Members</article>
+        </section>
+       </div>
+
      </main>
   </body>
 </html>
