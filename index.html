@@ -50,6 +50,9 @@
         .icon-invert {
           @apply block w-7 h-7 p-[4px] text-center text-sm font-bold bg-gray-800 text-white rounded-full;
         }
+        .icon-extra {
+          @apply block w-7 h-7 p-0 -rotate-[46deg] text-center text-lg font-bold bg-[#ABEF5F] text-black rounded-full;
+        }
         .fx-row {
           @apply flex flex-row justify-between items-center;
         }
@@ -111,10 +114,10 @@
             <span class="material-symbols-rounded"> shopping_cart </span>
           </button>
           <button
-            class="bookConsult hidden md:flex items-center justify-between flex-row gap-2 bg-[#abef5f] font-bold text-black px-7 py-2 rounded-full transition-colors ease-linear duration-300 hover:bg-yellow-300"
+            class="group bookConsult hidden md:flex items-center justify-between flex-row gap-2 bg-[#abef5f] font-bold text-black px-7 py-2 rounded-full transition-colors ease-linear duration-300 hover:bg-yellow-300"
           >
             Book Consult
-            <span class="material-symbols-rounded icon-invert">
+            <span class="material-symbols-rounded icon-invert transition-all duration-300 ease-in-out group-hover:rotate-[360deg]">
               arrow_outward
             </span>
           </button>
@@ -125,7 +128,7 @@
               <span class="material-symbols-rounded"> menu </span>
             </summary>
             <ul
-              class="hidden-menu md:w-80 w-72 overflow-hidden flex items-baseline justi-left flex-col gap-2 text-lg rounded-lg bg-slate-200 shadow-[0_10px_50px_#00000069] border border-[#aba7a733] absolute top-12 right-0"
+              class="hidden-menu md:w-80 w-72 overflow-hidden flex items-baseline justi-left flex-col gap-2 text-lg rounded-lg bg-slate-200 shadow-[0_10px_50px_#00000069] border border-[#aba7a733] absolute top-12 right-0 z-10"
             >
               <li class="text-gray-900 bg-gray-300">
                 <span class="material-symbols-rounded"> home </span> Home
@@ -149,6 +152,18 @@
           </details>
         </div>
       </nav>
+
+      <!-- Hero Section -->
+      <div class="section-hero w-full flex items-center justify-center text-center flex-col gap-4 py-8">
+        <img src="./assets/banner.png" alt="banner" class="block max-w-full" />
+        <h1 class="w-full md:w-11/12 text-[#212121] text-2xl md:text-[3.5rem] font-black leading-[1.3333] drop-shadow-[1px_0_0_#212121] tracking-wide">A barn house of this design has a striking appearance</h1>
+        <p class="py-4 w-full md:w-4/5 font-medium text-sm md:text-lg text-gray-600">
+          The barn house captivates with its blend of rustic charm and modern
+          sophistication, featuring weathered wood, sleek metal accents, and
+          large windows that flood the space with natural light.
+        </p>
+        <button class="flex items-center justify-center flex-row gap-2 rounded-full border border-yellow-400 font-bold bg-[#abef5f80] py-2 px-4 w-full md:w-48 text-gray-900 text-sm md:text-lg">View Details <span class="material-symbols-rounded icon-extra"> east </span</button>
+      </div>
     </header>
   </body>
 </html>
