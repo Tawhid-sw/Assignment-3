@@ -27,7 +27,9 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: {},
+            colors: {
+            "prime" : "#212121",
+            },
             fontFamily: {
               display: ['"Manrope", sans-serif'],
             },
@@ -77,11 +79,29 @@
             transition: 0.5s;
           }
         }
+        img{
+          @apply block max-w-full
+        }
         .nv {
           @apply text-gray-600 px-2 pt-2 text-lg;
         }
         .cs-text {
           font-size: 1.5rem !important;
+        }
+        .commercial , .residential{
+          @apply flex items-center justify-between gap-4 px-3 py-8
+        }
+        .commercial img, .residential img{
+          @apply lg:mb-0 max-md:mb-[8%]
+        }
+        .commercial section, .residential section{
+          @apply leading-[1.6666]
+        }
+        .commercial section h4, .residential section h4{
+          @apply text-lg text-gray-600 font-black pb-2
+        }
+        .commercial section article, .residential section article{
+          @apply text-gray-500 font-semibold text-sm w-[65%]
         }
       }
     </style>
@@ -156,7 +176,7 @@
       <!-- Hero Section -->
       <div class="section-hero w-full flex items-center justify-center text-center flex-col gap-4 py-8">
         <img src="./assets/banner.png" alt="banner" class="block max-w-full" />
-        <h1 class="w-full md:w-11/12 text-[#212121] text-2xl md:text-[3.5rem] font-black leading-[1.3333] drop-shadow-[1px_0_0_#212121] tracking-wide">A barn house of this design has a striking appearance</h1>
+        <h1 class="w-full md:w-11/12 text-prime text-2xl md:text-[3.5rem] font-black leading-[1.3333] drop-shadow-[1px_0_0_#212121] tracking-wide">A barn house of this design has a striking appearance</h1>
         <p class="py-4 w-full md:w-4/5 font-medium text-sm md:text-lg text-gray-600">
           The barn house captivates with its blend of rustic charm and modern
           sophistication, featuring weathered wood, sleek metal accents, and
@@ -165,5 +185,44 @@
         <button class="flex items-center justify-center flex-row gap-2 rounded-full border border-yellow-400 font-bold bg-[#abef5f80] py-2 px-4 w-full md:w-48 text-gray-900 text-sm md:text-lg">View Details <span class="material-symbols-rounded icon-extra"> east </span</button>
       </div>
     </header>
+
+    <!-- Main -->
+     <main class="xl:px-28 py-0 md:py-6 sm:px-8 px-4 block w-full">
+      <div class="seection-1 flex items-start justify-between flex-col lg:flex-row gap-4 w-full relative mt-4 md:mt-12 py-0 md:pt-8">
+
+        <div class="infos flex items-center lg:items-start justify-between flex-col w-full lg:w-1/2 gap-4">
+
+          <img src="./assets/Vector.png" alt="vector" class="vector w-20 xl:w-32 absolute inset-0 xl:-translate-x-14 -translate-x-4 xl:-translate-y-6 -translate-y-2 hidden lg:block">
+
+          <button class="about group text-gray-600 w-full flex items-center lg:justify-start justify-center gap-3 font-bold "><span class="material-symbols-rounded group-hover:translate-x-2 transition-all duration-200">
+            east
+            </span> About Us</button>
+          <h1 class="font-black text-prime text-2xl md:text-4xl lg:w-full xl:w-4/5 sm:w-3/4 w-full text-center lg:text-left ">
+            We design thoughtful, liveable spaces</h1>
+          <p class="text-sm text-gray-600 font-semibold py-3 text-center lg:text-left">The barn house captivates with its blend of rustic charm
+             and modern sophistication, featuring weathered wood, sleek metal accents.
+          </p>
+          <div class="imgs-infoz flex items-start justify-between lg:flex-col sm:flex-row flex-col">
+            <div class="commercial">
+              <img src="./assets/commercial.png" alt="commercial">
+              <section>
+                <h4>Commercial</h4>
+                <article>The barn house captivates with its blend of rustic charm and modern.</article>
+              </section>
+            </div>
+            <div class="residential">
+              <img src="./assets/residential.png" alt="residential">
+              <section>
+                <h4>Residential</h4>
+                <article>The barn house captivates with its blend of rustic charm and modern.</article>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <img src="./assets/Rectangle.png" alt="house" class="
+        w-full  lg:w-1/2 overflow-hidden rounded-xl max-h-full lg:max-h-full sm:max-h-[29rem] object-cover">
+      </div>
+     </main>
   </body>
 </html>
