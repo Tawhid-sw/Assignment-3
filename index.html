@@ -34,11 +34,13 @@
               display: ['"Manrope", sans-serif'],
             },
             backgroundImage: {
-              "hero-pattern": "url('./assets/bg.jpg')",
+              "bg-image": "url('./assets/bg.jpg')",
             },
             screens: {
               "in-fx": "1080px",
               "at-mid" : '912px',
+              "at-2nd-mid" : '816px',
+              "at-3rd-mid" : '687px',
             },
           },
         },
@@ -124,6 +126,35 @@
         }
         .card p{
           @apply text-sm font-semibold text-gray-600 tracking-[1px]
+        }
+        .cardz section{
+          @apply p-4 flex flex-col at-3rd-mid:flex-row at-2nd-mid:flex-col  items-start justify-between gap-4 w-full at-2nd-mid:w-3/5 rounded-lg bg-white
+        }
+        .cardz section .text-btn div span{
+          @apply text-sm text-gray-600 font-normal flex items-center flex-row gap-2
+        }
+        .cardz section .text-btn h4{
+          @apply font-extrabold text-prime text-lg my-2
+        }
+        .cardz section .text-btn p{
+          @apply text-sm font-semibold text-gray-600 my-3
+        }
+        form input , textarea{
+          @apply py-4 px-6 rounded-md sm:rounded-full outline-none border-none max-sm:w-full max-sm:mb-3 shadow-lg
+        }
+        form input::placeholder , textarea::placeholder{
+          @apply text-gray-500 text-sm font-medium
+        }
+        form input[type=number]{
+          -moz-appearance: textfield;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+        form textarea{
+          @apply h-40 rounded-lg  
         }
       }
     </style>
@@ -308,7 +339,7 @@
         </div>
 
       <!-- Section-4 -->
-       <div class="flex flex-col items-center justify-between w-full gap-6 px-0 py-0 section-4 max-at-mid:px-2">
+       <div class="flex flex-col items-center justify-between w-full gap-6 px-0 py-0 mb-10 section-4 max-at-mid:px-2 md:mb-28">
         <button class="flex items-center justify-center gap-3 font-bold text-gray-600 w-max about group at-mid:justify-start "><span class="transition-all duration-200 material-symbols-rounded group-hover:translate-x-2">
           east
           </span> Explore our Latest works
@@ -387,7 +418,107 @@
 
        </div>
 
+       <!-- Section-5 -->
+        <div class="flex flex-col items-center justify-between gap-4 mb-10 section-5 md:mb-28">
+          <button class="flex items-center justify-center gap-3 font-bold text-gray-600 w-max about group lg:justify-start "><span class="transition-all duration-200 material-symbols-rounded group-hover:translate-x-2">
+            east
+            </span> Rinterio News
+          </button>
+          <h1 class="text-2xl font-black md:text-3xl text-prime lg:text-4xl">Read Our Articles and News</h1>
+          <p class="text-sm w-full md:w-[55%] font-semibold text-gray-500 text-center leading-[1.6666]">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+
+          <div class="flex flex-col items-center justify-between w-full gap-8 at-2nd-mid:flex-row cardz">
+            <section>
+              <img src="./assets/article1.png" class="max-md:w-full" alt="1">
+            <div class="text-btn">
+              <div class="flex items-center justify-start gap-4">
+                <span>
+                <span class="material-symbols-rounded">calendar_month </span>
+                July14, 2024
+              </span>
+              <span>
+                <span class="material-symbols-rounded"> account_circle </span>
+                By Admin
+              </span>
+            </div>
+              <h4>How to choose the furniture right  of your home.</h4>
+              <p>The barn house captivates with its blend of rustic charm and modern. </p>
+              <button class="flex flex-row items-center gap-2 text-sm font-black text-prime">Read More <span class="material-symbols-rounded icon"> arrow_outward </span>
+              </button>
+            </section>
+
+            <section>
+              <img src="./assets/article2.png" class="max-md:w-full" alt="1">
+            <div class="text-btn">
+              <div class="flex items-center justify-start gap-4">
+                <span>
+                <span class="material-symbols-rounded">calendar_month </span>
+                July14, 2024
+              </span>
+              <span>
+                <span class="material-symbols-rounded"> account_circle </span>
+                By Admin
+              </span>
+            </div>
+              <h4>How to choose the furniture right  of your home.</h4>
+              <p>The barn house captivates with its blend of rustic charm and modern. </p>
+              <button class="flex flex-row items-center gap-2 text-sm font-black text-prime">Read More <span class="material-symbols-rounded icon"> arrow_outward </span>
+              </button>
+            </section>
+            
+            <section>
+              <img src="./assets/article3.png" class="max-md:w-full" alt="1">
+            <div class="text-btn">
+              <div class="flex items-center justify-start gap-4">
+                <span>
+                <span class="material-symbols-rounded">calendar_month </span>
+                July14, 2024
+              </span>
+              <span>
+                <span class="material-symbols-rounded"> account_circle </span>
+                By Admin
+              </span>
+            </div>
+              <h4>How to choose the furniture right  of your home.</h4>
+              <p>The barn house captivates with its blend of rustic charm and modern. </p>
+              <button class="flex flex-row items-center gap-2 text-sm font-black text-prime">Read More <span class="material-symbols-rounded icon"> arrow_outward </span>
+              </button>
+            </section>
+            
+            </div>
+        </div>
        
+        <!-- Section-6 -->
+         <div class="flex flex-col items-center justify-between w-full gap-6 py-10 bg-center bg-no-repeat bg-cover bg-bg-image section-6">
+
+          <button class="flex items-center justify-center gap-3 px-4 py-2 font-bold text-gray-600 bg-yellow-100 rounded-full w-max about group lg:justify-start "><span class="transition-all duration-200 material-symbols-rounded group-hover:translate-x-2">
+            east
+            </span> Let's Connect
+          </button>
+
+          <h1 class="text-2xl font-black max-sm:text-center md:text-3xl text-prime lg:text-4xl">Let's Discuss Next Project</h1>
+          <p class="text-sm w-full md:w-[55%] font-semibold text-gray-500 text-center leading-[1.6666]">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+
+          <form 
+          action="#" 
+          method="post" 
+          class="block w-full grid-cols-2 gap-6 p-2 sm:grid md:px-24">
+            <input type="text" placeholder="Frist Name*" required>
+            <input type="text" placeholder="Last Name*" required>
+            <input type="number" placeholder="Phone Number*" required>
+            <input type="email" placeholder="Email*" required>
+            <textarea name="message" id="message" placeholder="Write your message here" class="col-span-2"></textarea>
+            <button
+            type="submit"
+            class="col-span-2 group bookConsult flex items-center justify-center flex-row gap-2 bg-[#abef5f] font-bold text-black px-7 py-2 rounded-full transition-colors ease-linear duration-300 hover:bg-yellow-300 w-full "
+          >
+          Send Mail
+            <span class="material-symbols-rounded icon-invert transition-all duration-300 ease-in-out group-hover:rotate-[360deg]">
+              arrow_outward
+            </span>
+          </button>
+          </form>
+         </div>
      </main>
   </body>
 </html>
