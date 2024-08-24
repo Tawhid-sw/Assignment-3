@@ -70,18 +70,6 @@
         details ul.hidden-menu > li {
           @apply w-full grid grid-cols-[20px,1fr] grid-rows-[40px] gap-3 justify-center items-center px-8 py-2 rounded-lg hover:text-gray-900 transition-colors ease-in-out duration-150;
         }
-        details[open] {
-          ul.hidden-menu {
-            transition: 0.5s;
-            @apply max-h-80;
-          }
-        }
-        details:not([open]) {
-          ul.hidden-menu {
-            transition: 0.5s;
-            @apply max-h-0;
-          }
-        }
         img{
           @apply block max-w-full
         }
@@ -201,7 +189,7 @@
               <span class="material-symbols-rounded"> menu </span>
             </summary>
             <ul
-              class="hidden-menu md:w-80 w-72 overflow-hidden flex items-baseline justi-left flex-col gap-2 text-lg rounded-lg bg-slate-200 shadow-[0_10px_50px_#00000069] border border-[#aba7a733] absolute top-12 right-0 z-10"
+              class="hidden-menu max-h-80 md:w-80 w-72 overflow-hidden flex items-baseline justi-left flex-col gap-2 text-lg rounded-lg bg-slate-200 shadow-[0_10px_50px_#00000069] border border-[#aba7a733] absolute top-12 right-0 z-10"
             >
               <li class="text-gray-900 bg-gray-300">
                 <span class="material-symbols-rounded"> home </span> Home
@@ -520,5 +508,31 @@
           </form>
          </div>
      </main>
+
+     <!-- Footer -->
+     <footer class="bg-[#1c1c1c] flex items-center  flex-col justify-between gap-10 sm:px-8 px-4 py-16">
+      <a
+      href="#"
+      class="gap-2 text-xl font-extrabold text-white fx-row sm:text-4xl"
+      ><span class=" material-symbols-rounded icon"> arrow_outward </span
+      >Rinterio</a
+    > <p class="text-[#5a5a5a] font-medium w-full sm:w-[53%] text-center leading-[1.6666]">The barn house captivates with its blend of rustic charm and modern sophistication,
+      featuring weathered wood, sleek metal accents.</p>
+      <ul class="flex flex-col items-center justify-between gap-12 font-normal text-white sm:flex-row">
+        <li>Home</li>
+        <li>Services</li>
+        <li>Portfolio</li>
+        <li>Blogs</li>
+        <li>Contact Us</li>
+      </ul>
+      <button
+      class="group bookConsult max-sm:w-full flex items-center justify-center sm:justify-between flex-row gap-2 bg-[#abef5f] font-bold text-black px-7 py-2 rounded-full transition-colors ease-linear duration-300 hover:bg-yellow-300"
+    >
+      Book Consult
+      <span class="material-symbols-rounded icon-invert transition-all duration-300 ease-in-out group-hover:rotate-[360deg]">
+        arrow_outward
+      </span>
+    </button>
+     </footer>
   </body>
 </html>
