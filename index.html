@@ -158,9 +158,10 @@
           min-width: calc(20rem * var(--items));
         }
         .Slider ul li{
-          @apply w-80 rounded-lg overflow-hidden absolute left-full;
+          @apply w-80 rounded-lg overflow-hidden absolute left-full brightness-75;
+          transition: .5s;
           animation: AutoRun var(--animation-delay) linear infinite;
-          animation-delay: calc(var(--animation-delay) / var(--items) *  (var(--index) - 1) - var(--animation-delay));
+          animation-delay: calc(var(--animation-delay) / var(--items) *  (var(--index) - 1) - 50s);
         }
         .Slider ul li img{
           @apply w-full aspect-video
@@ -172,6 +173,9 @@
         }
         .Slider ul:hover li{
           animation-play-state: paused !important;
+        }
+        .Slider ul li:hover{
+          @apply brightness-100
         }
       }
     </style>
@@ -374,25 +378,65 @@
             --animation-delay: 30s;
             --items: 10;
             ">
-            <li style="--index:1"><img src="./assets/Image-1.jpg">
+            <li style="--index:1"><img 
+              loading="lazy"
+              role="presentation"
+              decoding="async"
+              src="./assets/Image-1.jpg">
             </li>
-            <li style="--index:2"><img src="./assets/Image-2.jpg">
+            <li style="--index:2"><img 
+              loading="lazy"
+              role="presentation"
+              decoding="async"
+              src="./assets/Image-2.jpg">
             </li>
-            <li style="--index:3"><img src="./assets/Image-3.jpg">
+            <li style="--index:3"><img 
+              loading="lazy"
+              role="presentation"
+              decoding="async"
+              src="./assets/Image-3.jpg">
             </li>
-            <li style="--index:4"><img src="./assets/Image-4.jpg">
+            <li style="--index:4"><img 
+              loading="lazy"
+              role="presentation"
+              decoding="async"
+              src="./assets/Image-4.jpg">
             </li>
-            <li style="--index:5"><img src="./assets/Image-5.jpg">
+            <li style="--index:5"><img 
+              loading="lazy"
+              role="presentation"
+              decoding="async"
+              src="./assets/Image-5.jpg">
             </li>
-            <li style="--index:6"><img src="./assets/Image-6.jpg">
+            <li style="--index:6"><img 
+              loading="lazy"
+              role="presentation"
+              decoding="async"
+              src="./assets/Image-6.jpg">
             </li>
-            <li style="--index:7"><img src="./assets/Image-7.jpg">
+            <li style="--index:7"><img 
+              loading="lazy"
+              role="presentation"
+              decoding="async"
+              src="./assets/Image-7.jpg">
             </li>
-            <li style="--index:8"><img src="./assets/Image-8.jpg">
+            <li style="--index:8"><img 
+              loading="lazy"
+              role="presentation"
+              decoding="async"
+              src="./assets/Image-8.jpg">
             </li>
-            <li style="--index:9"><img src="./assets/Image-9.jpg">
+            <li style="--index:9"><img 
+              loading="lazy"
+              role="presentation"
+              decoding="async"
+              src="./assets/Image-9.jpg">
             </li>
-            <li style="--index:10"><img src="./assets/Image-10.jpg">
+            <li style="--index:10"><img 
+              loading="lazy"
+              role="presentation"
+              decoding="async"
+              src="./assets/Image-10.jpg">
             </li>
           </ul>
         </div>
