@@ -35,6 +35,7 @@
             },
             backgroundImage: {
               "bg-image": "url('./assets/bg.jpg')",
+              "SliderBg-img" : "url('./assets/background.jpg')"
             },
             screens: {
               "in-fx": "1080px",
@@ -143,6 +144,34 @@
         }
         form textarea{
           @apply h-40 rounded-lg  
+        }
+        .Slider{
+          mask-image: linear-gradient(
+            to right, 
+            transparent, 
+            #000 10% 90%, 
+            transparent
+            );
+        }
+        .Slider ul{
+          @apply flex flex-row items-center justify-between gap-6 w-full relative h-60;
+          min-width: calc(20rem * var(--items));
+        }
+        .Slider ul li{
+          @apply w-80 rounded-lg overflow-hidden absolute left-full;
+          animation: AutoRun var(--animation-delay) linear infinite;
+          animation-delay: calc(var(--animation-delay) / var(--items) *  (var(--index) - 1) - var(--animation-delay));
+        }
+        .Slider ul li img{
+          @apply w-full aspect-video
+        }
+        @keyframes AutoRun {
+          to{
+            left: -20rem;
+          }
+        }
+        .Slider ul:hover li{
+          animation-play-state: paused !important;
         }
       }
     </style>
@@ -325,6 +354,50 @@
             </div>
           </div>
         </div>
+
+
+      <!-- Section-Sp -->
+       <div class="relative flex-col items-center justify-between hidden gap-6 px-2 py-6 mb-10 overflow-hidden rounded-lg sm:flex section-sp md:mb-28 ">
+        <img src="./assets/background.jpg" class="absolute inset-0 w-full -translate-y-1/4 -z-10 brightness-50 blur-sm lg:scale-100 sm:scale-[3]">
+        <button class="flex items-center justify-center gap-3 font-bold text-gray-300 w-max about group at-mid:justify-start "><span class="transition-all duration-200 material-symbols-rounded group-hover:translate-x-2">
+          east
+          </span> Explore more
+        </button>
+        <h1 class="text-2xl font-black text-white at-mid:text-3xl at-mid:text-4xl">
+          Our recent project
+      </h1>
+        <p class="text-sm w-full at-mid:w-[55%] font-semibold text-gray-400 text-center leading-[1.6666]">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.
+        </p>
+
+        <div class="w-full overflow-hidden Slider ">
+          <ul style="
+            --animation-delay: 30s;
+            --items: 10;
+            ">
+            <li style="--index:1"><img src="./assets/Image-1.jpg">
+            </li>
+            <li style="--index:2"><img src="./assets/Image-2.jpg">
+            </li>
+            <li style="--index:3"><img src="./assets/Image-3.jpg">
+            </li>
+            <li style="--index:4"><img src="./assets/Image-4.jpg">
+            </li>
+            <li style="--index:5"><img src="./assets/Image-5.jpg">
+            </li>
+            <li style="--index:6"><img src="./assets/Image-6.jpg">
+            </li>
+            <li style="--index:7"><img src="./assets/Image-7.jpg">
+            </li>
+            <li style="--index:8"><img src="./assets/Image-8.jpg">
+            </li>
+            <li style="--index:9"><img src="./assets/Image-9.jpg">
+            </li>
+            <li style="--index:10"><img src="./assets/Image-10.jpg">
+            </li>
+          </ul>
+        </div>
+       </div>
+
 
       <!-- Section-4 -->
        <div class="flex flex-col items-center justify-between w-full gap-6 px-0 py-0 mb-10 section-4 max-at-mid:px-2 md:mb-28">
